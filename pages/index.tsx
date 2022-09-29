@@ -30,15 +30,15 @@ export default function Home({ products }: InferGetStaticPropsType<typeof getSta
         </div>
         <div className='container mx-auto flex flex-wrap p-4 gap-2 justify-center'>
           {
-            products.map(p => (<div className='flex w-96  border rounded p-4 overflow-hidden hover:shadow-lg transition' key={p.id}>
-              <Image src={p.image} width={100} height={50} alt={''} className="self-start" />
-              <div className='flex flex-col ml-4 content-start items-start self-stretch'>
+            products.map(p => (<a href='#' className='flex w-96 items-start border rounded p-4 hover:shadow-lg transition' key={p.id}>
+              <Image src={p.image} width={100} height={50} alt={''} />
+              <div className='flex flex-col ml-4 content-start items-start'>
                 <h4 className='font-bold leading-tight'>{p.title}</h4>
                 <h5 className='font-medium my-2'>{p.category}</h5>
-                <p className='max-h-32 line-clamp-3 overflow-hidden text-ellipsis whitespace-normal'>{p.description}</p>
+                <p className='line-clamp-3 '>{p.description}</p>
               </div>
 
-            </div>))
+            </a>))
           }
         </div>
       </main>
