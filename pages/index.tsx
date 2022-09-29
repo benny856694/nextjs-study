@@ -33,9 +33,9 @@ export default function Home({ products }: InferGetStaticPropsType<typeof getSta
             products.map(p => (<div className='flex w-96  border rounded p-4 overflow-hidden shadow-lg' key={p.id}>
               <Image src={p.image} width={100} height={50} alt={''} className="self-start"/>
               <div className='flex flex-col ml-4 self-stretch'>
-                <h4 className='font-bold '>{p.title}</h4>
-                <h5>{p.category}</h5>
-                <p className='whitespace-wrap max-h-32 overflow-hidden text-ellipsis whitespace-normal'>{p.description}</p>
+                <h4 className='font-bold leading-tight'>{p.title}</h4>
+                <h5 className='font-medium my-2'>{p.category}</h5>
+                <p className='max-h-32 overflow-hidden text-ellipsis whitespace-normal'>{p.description.slice(0, 100)}</p>
               </div>
 
             </div>))
