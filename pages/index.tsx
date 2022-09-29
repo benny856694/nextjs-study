@@ -25,7 +25,7 @@ export default function Home({ products }: InferGetStaticPropsType<typeof getSta
       </Head>
 
       <main className="">
-        <div className="text-lg bg-black text-white font-bold p-2">
+        <div className="text-lg sticky top-0 bg-black text-white font-bold p-2">
           <h1 className="container mx-auto">Ecommerce Shop</h1>
         </div>
         <div className='flex flex-wrap p-4 gap-2 justify-center'>
