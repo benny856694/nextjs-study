@@ -21,24 +21,28 @@ export default function Home({ products }: InferGetStaticPropsType<typeof getSta
   return (
     <div>
       <Head>
-        <title>Fake Ecommerce</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <title>Ecommerce Shop</title>
       </Head>
 
       <main className="">
         <div className="text-lg sticky top-0 bg-black text-white font-bold p-2">
           <h1 className="container mx-auto">Ecommerce Shop</h1>
         </div>
-        <div className='flex flex-wrap p-4 gap-2 justify-center'>
+        <div className='container mx-auto flex flex-wrap p-4 gap-2 justify-center'>
           {
-            products.map(p => (<div className='flex w-96  border rounded p-4 overflow-hidden shadow-lg' key={p.id}>
-              <Image src={p.image} width={100} height={50} alt={''} className="self-start"/>
-              <div className='flex flex-col ml-4 self-stretch'>
+            products.map(p => (<a href='#' className='flex w-96 items-start border rounded p-4 hover:shadow-lg transition' key={p.id}>
+              <Image src={p.image} width={100} height={50} alt={''} />
+              <div className='flex flex-col ml-4 content-start items-start'>
                 <h4 className='font-bold leading-tight'>{p.title}</h4>
                 <h5 className='font-medium my-2'>{p.category}</h5>
-                <p className='max-h-32 overflow-hidden text-ellipsis whitespace-normal'>{p.description.slice(0, 100)}</p>
+                <p className='line-clamp-3 '>{p.description}</p>
               </div>
 
-            </div>))
+            </a>))
           }
         </div>
       </main>
