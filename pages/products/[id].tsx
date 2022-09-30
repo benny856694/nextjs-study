@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from "next"
-import { baseUrl } from "../consts"
-import type { Product } from '../model/product'
+import { baseUrl } from "../../utils/consts"
+import type { Product } from '../../model/product'
 import Image from 'next/future/image'
 
 

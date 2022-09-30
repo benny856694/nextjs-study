@@ -1,24 +1,20 @@
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Image from 'next/future/image'
 import Head from 'next/head';
-import { baseUrl } from './consts';
-import type { Product } from './model/product';
+import { baseUrl } from '../utils/consts';
+import type { Product } from '../model/product';
+import Link from 'next/link';
 
 
 
-export const getStaticProps: GetStaticProps = async (context) => {
-  const resp = await fetch(`${baseUrl}/products`)
-  const json = await resp.json() as Product[]
-  console.log(json)
-  return {
-    redirect: { statusCode: 302, destination: '/products' }
-  }
-}
 
-export default function Home({ products }: InferGetStaticPropsType<typeof getStaticProps>) {
+
+export default function Home({ props }) {
   return (
     <div>
-      redirected
+      <Link href={'/products'}>
+        <a >Go to Products page</a>
+      </Link>
     </div>
   );
 }
