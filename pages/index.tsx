@@ -7,7 +7,7 @@ import type { Product } from './model/product';
 
 
 export const getStaticProps: GetStaticProps<{ products: Product[] }> = async (context) => {
-  const resp = await fetch(baseUrl)
+  const resp = await fetch(`${baseUrl}/products`)
   const json = await resp.json() as Product[]
   console.log(json)
   return {
@@ -34,7 +34,7 @@ export default function Home({ products }: InferGetStaticPropsType<typeof getSta
         </div>
         <div className='container mx-auto flex flex-wrap p-4 gap-2 justify-center'>
           {
-            products.map(p => (<a href='#' className='flex w-96 items-start border rounded p-4 hover:shadow-lg transition' key={p.id}>
+            products.map(p => (<a href='#' className='flex w-96 items-start border rounded-xl p-4 hover:shadow-lg transition' key={p.id}>
               <Image src={p.image} width={100} height={50} alt={''} />
               <div className='flex flex-col ml-4 content-start items-start'>
                 <h4 className='font-bold leading-tight'>{p.title}</h4>
