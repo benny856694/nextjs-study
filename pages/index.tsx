@@ -39,7 +39,7 @@ export default function Home({ products }: InferGetStaticPropsType<typeof getSta
               <div className='flex flex-col ml-4 content-start items-start'>
                 <h4 className='font-bold leading-tight'>{p.title}</h4>
                 <h5 className='font-medium my-2'>{p.category}</h5>
-                <p className='line-clamp-3 '>{p.description}</p>
+                <p className='line-clamp-3 break-all'>{p.description}</p>
               </div>
 
             </a>))
