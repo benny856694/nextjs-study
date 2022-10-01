@@ -10,7 +10,7 @@ import type { Product } from '../model/product';
 export const getStaticProps: GetStaticProps<{ products: Product[] }> = async (context) => {
     const resp = await fetch(`${baseUrl}/products`)
     const json = await resp.json() as Product[]
-    console.log(json)
+    //console.log(json)
     return {
         props: {
             products: json
