@@ -6,7 +6,14 @@ import type { Product } from '../model/product';
 import Link from 'next/link';
 
 
-
+export const getStaticProps: GetStaticProps = async () => {
+return {
+  redirect: {
+    statusCode: 307,
+    destination: '/products'
+  }
+}
+}
 
 
 export default function Home({ props }) {
