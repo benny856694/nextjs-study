@@ -18,7 +18,7 @@ export default async function Page({ params }) {
       key={product.id}
     >
       <Image
-        src="https://via.placeholder.com/150"
+        src={product.image}
         width={300}
         height={50}
         alt={product.title}
