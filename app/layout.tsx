@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import '../styles/globals.css';
 
 export default function RootLayout({
@@ -8,10 +9,29 @@ export default function RootLayout({
   return (
     <html>
       <title>NextJs 13</title>
-      <head></head>
-      <body className="container mx-auto">
-        <h2 className="text-center text-lg mt-4">Nextjs 13 is Cool</h2>
-        {children}
+      <Head>
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <title>Ecommerce Shop</title>
+      </Head>
+      <body>
+        <main className="container mx-auto">{children}</main>
       </body>
     </html>
   );
