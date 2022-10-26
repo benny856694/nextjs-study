@@ -1,5 +1,5 @@
 import { GetServerSideProps, GetStaticProps, InferGetStaticPropsType } from 'next';
-import Image from 'next/future/image'
+import Image from 'next/image'
 import Head from 'next/head';
 import { baseUrl } from '../utils/consts';
 import type { Product } from '../model/product';
