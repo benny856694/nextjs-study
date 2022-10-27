@@ -7,7 +7,7 @@ import type { Product } from '../model/product';
 async function getData(): Promise<Product[]> {
   const resp = await fetch(`${baseUrl}/products`);
   const json = (await resp.json()) as Product[];
-  console.log(json);
+  //console.log(json);
   return json;
 }
 
@@ -22,7 +22,7 @@ export default async function Page() {
         {products.map((p) => (
           <Link href={`/products/${encodeURIComponent(p.id)}`} key={p.id}>
             <div className="flex w-96 items-start border rounded-xl p-4 hover:shadow-lg transition cursor-pointer">
-              <Image src={p.image} width={100} height={50} alt={''} />
+              {/* <Image src={p.image} width={100} height={50} alt={''} /> */}
               <div className="flex flex-col ml-4 content-start items-start">
                 <h4 className="font-bold leading-tight">{p.title}</h4>
                 <h5 className="font-medium my-2">{p.category}</h5>

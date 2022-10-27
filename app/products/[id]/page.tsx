@@ -10,7 +10,7 @@ async function getData(productId: number): Promise<Product> {
   return product;
 }
 
-export default async function Page({ params }) {
+export default async function Page({ params }: {params: {id: number}}) {
   const product = await getData(params.id);
   return (
     <div
