@@ -7,7 +7,7 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <title>NextJs 13</title>
+      <title>Ecommerce Shop</title>
       <head>
         <link
           rel="apple-touch-icon"
@@ -27,7 +27,6 @@ export default function RootLayout({
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
-        <title>Ecommerce Shop</title>
       </head>
       <body>
         <main className="container mx-auto">{children}</main>
