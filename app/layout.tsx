@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import '../styles/globals.css';
 
 export default function RootLayout({
@@ -9,7 +8,7 @@ export default function RootLayout({
   return (
     <html>
       <title>NextJs 13</title>
-      <Head>
+      <head>
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -29,7 +28,7 @@ export default function RootLayout({
         />
         <link rel="manifest" href="/site.webmanifest" />
         <title>Ecommerce Shop</title>
-      </Head>
+      </head>
       <body>
         <main className="container mx-auto">{children}</main>
       </body>
