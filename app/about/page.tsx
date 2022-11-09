@@ -13,5 +13,5 @@ export default function Page() {
 
   const d = use(data);
 
-  return <div>about page {d.name} </div>;
+  return <>{d.result.map((x: string, i: number) => <div key={i}>{x}</div>)} </>;
 }
